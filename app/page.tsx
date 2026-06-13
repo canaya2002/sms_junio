@@ -7,127 +7,119 @@ const PHONE_TEL = "+17133227646";
 
 const YOUTUBE_ID = "3Z6BOOCBgas";
 
-const AVATARS = [
-  { letter: "M", color: "bg-green-500" },
-  { letter: "S", color: "bg-blue-500" },
-  { letter: "R", color: "bg-amber-500" },
-  { letter: "A", color: "bg-rose-500" },
-  { letter: "J", color: "bg-purple-500" },
-];
-
 export default function Home() {
   return (
     <main
-      className="overflow-hidden flex flex-col items-center px-3 sm:px-5 py-2 sm:py-4 relative animate-fade-in"
+      className="overflow-hidden flex flex-col items-center bg-paper px-0 sm:px-4 sm:py-2"
       style={{ height: "100dvh" }}
     >
-      {/* Fondo claro con acentos dorados suaves */}
-      <div
-        className="absolute inset-0 z-0"
-        aria-hidden="true"
-        style={{
-          background:
-            "linear-gradient(180deg, #FFFFFF 0%, #FDFBF4 15%, #FBF7EC 35%, #F5ECD4 52%, #FBF7EC 70%, #FDFBF4 88%, #FFFFFF 100%)",
-        }}
-      >
-        <svg
-          className="absolute top-[10%] left-0 w-full h-[100px] opacity-[0.05]"
-          viewBox="0 0 1440 100"
-          preserveAspectRatio="none"
-        >
-          <path fill="#0D1B3E" d="M0,50 C360,100 720,0 1440,70 L1440,100 L0,100 Z" />
-        </svg>
-        <svg
-          className="absolute bottom-[15%] left-0 w-full h-[100px] opacity-[0.05]"
-          viewBox="0 0 1440 100"
-          preserveAspectRatio="none"
-        >
-          <path fill="#1A3A6B" d="M0,70 C240,10 720,90 1440,30 L1440,100 L0,100 Z" />
-        </svg>
-        <div className="absolute top-[18%] left-[5%] w-48 h-48 bg-gold/15 rounded-full blur-3xl" />
-        <div className="absolute bottom-[18%] right-[5%] w-56 h-56 bg-gold/15 rounded-full blur-3xl" />
-        <div className="absolute top-[52%] left-1/2 -translate-x-1/2 w-72 h-32 bg-gold/10 rounded-full blur-3xl" />
-      </div>
-
-      {/* Logo */}
-      <div className="relative z-10 shrink-0 mt-1.5 sm:mt-3">
-        <Image
-          src="/LogoManuelSolis.png"
-          alt="Law Offices of Manuel Solis"
-          width={400}
-          height={182}
-          priority
-          className="h-14 sm:h-20 md:h-24 w-auto mix-blend-multiply"
-        />
-      </div>
-
-      {/* Contenido principal */}
-      <div className="relative z-10 flex-1 flex flex-col items-center justify-center min-h-0 w-full gap-2 sm:gap-3 py-1">
-        {/* Enganche + Headline */}
-        <div className="text-center shrink-0">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-navy/5 border border-gold/40 text-navy/80 text-[10px] sm:text-xs font-bold tracking-widest uppercase">
-            <span className="inline-block w-1.5 h-1.5 bg-gold rounded-full animate-pulse" />
-            Aviso importante para ti
-          </span>
-          <h1 className="mt-1.5 text-[26px] sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-[1.05] text-navy">
-            ROI PROGRAM
-            <br />
-            <span className="text-gradient-gold">SIGUE VIGENTE</span> PARA TI
-          </h1>
-          <p className="text-xs sm:text-sm md:text-base text-navy/70 max-w-[320px] sm:max-w-md mx-auto mt-1.5 leading-snug">
-            Activa hoy tu representación legal y obtén respaldo profesional
-            durante los próximos 12 meses.
-          </p>
-        </div>
-
-        {/* Video */}
-        <div className="relative shrink-0">
-          <div
-            className="aspect-video rounded-lg sm:rounded-2xl overflow-hidden shadow-[0_8px_40px_rgba(197,165,90,0.35)] border-2 border-gold/40 relative bg-navy/5"
-            style={{ width: "min(88vw, calc(34dvh * 16 / 9), 560px)" }}
-          >
-            <iframe
-              className="absolute inset-0 w-full h-full"
-              src={`https://www.youtube.com/embed/${YOUTUBE_ID}?autoplay=1&mute=1&rel=0&modestbranding=1&playsinline=1`}
-              allow="autoplay; encrypted-media; fullscreen"
-              allowFullScreen
-              title="Video informativo — Law Offices of Manuel Solis"
-            />
+      {/* Tarjeta: una sola pantalla, estilo aviso limpio y moderno */}
+      <section className="animate-fade-in relative mx-auto flex h-full w-full max-w-[420px] flex-col gap-2 bg-white px-4 py-2.5 rounded-none sm:my-auto sm:rounded-3xl sm:shadow-[0_20px_60px_rgba(15,42,34,0.10)]">
+        {/* Encabezado: logo + especialidad (sin lenguaje de notificación oficial) */}
+        <header className="flex shrink-0 items-center justify-between border-b border-hairline pb-2">
+          <Image
+            src="/LogoManuelSolis.png"
+            alt="Law Offices of Manuel Solis"
+            width={1200}
+            height={546}
+            priority
+            className="h-9 sm:h-10 w-auto mix-blend-multiply"
+          />
+          <div className="flex flex-col items-end gap-0.5 leading-none text-right">
+            <span className="text-[9px] font-bold uppercase tracking-wide text-navy">
+              Abogados de Inmigración
+            </span>
+            <span className="text-[9px] font-medium uppercase tracking-[0.16em] text-navy/55">
+              Houston, TX
+            </span>
           </div>
-        </div>
+        </header>
 
-        {/* Badge de confianza + CTA */}
-        <div className="shrink-0 text-center flex flex-col items-center gap-2 sm:gap-2.5">
-          <div className="flex items-center gap-2 text-navy/60">
-            <div className="flex -space-x-1.5">
-              {AVATARS.map(({ letter, color }) => (
-                <div
-                  key={letter}
-                  className={`w-5 h-5 sm:w-6 sm:h-6 rounded-full ${color} border-2 border-white flex items-center justify-center text-white text-[8px] sm:text-[9px] font-bold`}
-                >
-                  {letter}
-                </div>
-              ))}
-            </div>
-            <p className="text-[10px] sm:text-xs leading-tight">
-              <span className="font-bold text-navy/80">
-                Más de 50,000 familias
+        {/* Bloque central */}
+        <div className="flex min-h-0 flex-1 flex-col items-center justify-center gap-2.5 text-center">
+          {/* Hook + Headline + Subheadline */}
+          <div className="shrink-0">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-[#ECFDF5] px-3 py-1 ring-1 ring-[#6EE7B7]">
+              <span className="relative flex h-1.5 w-1.5">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-go/70" />
+                <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-go" />
+              </span>
+              <span className="text-[10px] font-bold uppercase tracking-wide text-go-deep">
+                Aviso importante para ti
+              </span>
+            </span>
+
+            <h1 className="mt-2 font-black tracking-tight text-ink leading-[1.05] text-[clamp(24px,7vw,38px)]">
+              ROI PROGRAM SIGUE{" "}
+              <span className="[box-decoration-break:clone] [-webkit-box-decoration-break:clone] rounded-[3px] bg-mint/70 px-1">
+                VIGENTE
               </span>{" "}
-              ya confiaron en nosotros.
+              PARA TI
+            </h1>
+
+            <p className="mx-auto mt-2 max-w-[340px] text-[13px] sm:text-sm leading-snug text-[#475569]">
+              Activa hoy tu representación legal y obtén respaldo profesional
+              durante los próximos 12 meses.
             </p>
           </div>
 
+          {/* Video */}
+          <div className="relative shrink-0">
+            <div
+              className="relative aspect-video overflow-hidden rounded-2xl ring-1 ring-hairline"
+              style={{
+                width: "min(88vw, calc(28dvh * 16 / 9), 480px)",
+                boxShadow:
+                  "inset 0 0 0 1px rgba(197,165,90,0.30), 0 14px 40px -12px rgba(15,42,34,0.18)",
+              }}
+            >
+              <iframe
+                className="absolute inset-0 h-full w-full"
+                src={`https://www.youtube.com/embed/${YOUTUBE_ID}?autoplay=1&mute=1&rel=0&modestbranding=1&playsinline=1`}
+                allow="autoplay; encrypted-media; fullscreen"
+                allowFullScreen
+                title="Mensaje informativo — Law Offices of Manuel Solis"
+              />
+              <span className="pointer-events-none absolute left-2 top-2 z-10 rounded-full bg-ink/85 px-2 py-0.5 text-[9px] font-semibold text-white">
+                ▶ Mensaje informativo
+              </span>
+            </div>
+          </div>
+
+          {/* Sello de confianza */}
+          <div className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-[#F0FDF4] px-3 py-1.5">
+            <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4 shrink-0">
+              <path
+                d="M12 2l2.6 1.9 3.2-.3 1 3.1 2.6 1.9-1 3.1 1 3.1-2.6 1.9-1 3.1-3.2-.3L12 22l-2.6-1.9-3.2.3-1-3.1L2.6 15l1-3.1-1-3.1 2.6-1.9 1-3.1 3.2.3L12 2z"
+                fill="#0E9F6E"
+              />
+              <path
+                d="M8.5 12.2l2.3 2.3 4.5-4.7"
+                stroke="#fff"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+            <p className="text-[12px] leading-tight text-[#475569]">
+              <span className="font-bold text-ink">Más de 50,000 familias</span>{" "}
+              ya confiaron en nosotros.
+            </p>
+          </div>
+        </div>
+
+        {/* CTA */}
+        <div className="flex shrink-0 flex-col items-center gap-1.5">
           <a
             href={`tel:${PHONE_TEL}`}
-            className="group relative inline-flex flex-col items-center px-5 sm:px-14 py-3.5 sm:py-4 bg-gradient-to-b from-green-500 via-green-600 to-green-700 text-white font-bold text-[15px] sm:text-xl rounded-full active:scale-95 transition-all sm:tracking-wide animate-pulse-glow overflow-hidden"
+            className="animate-breathe flex min-h-[64px] w-full max-w-[360px] flex-col items-center justify-center rounded-2xl bg-go px-5 py-2.5 text-white transition-transform active:scale-[0.98]"
           >
-            <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
-            <span className="flex items-center gap-2 relative z-10">
+            <span className="flex items-center gap-2 text-[15px] sm:text-base font-bold tracking-wide">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                className="w-5 h-5 sm:w-6 sm:h-6 animate-float"
+                className="h-5 w-5"
               >
                 <path
                   fillRule="evenodd"
@@ -137,31 +129,26 @@ export default function Home() {
               </svg>
               ACTIVA TU ROI PROGRAM HOY
             </span>
-            <span className="text-sm sm:text-base font-semibold tracking-wider opacity-90 relative z-10">
+            <span className="text-[15px] font-semibold tabular-nums opacity-90">
               {PHONE_DISPLAY}
             </span>
           </a>
-
-          <div className="flex flex-col items-center gap-0.5">
-            <p className="text-[10px] sm:text-xs text-navy/70 leading-snug">
-              Toca el botón verde para llamar ahora
-            </p>
-            <p className="text-[10px] sm:text-[11px] text-navy/60">
-              Hablamos español • Atención personalizada
-            </p>
-          </div>
+          <p className="text-[10px] sm:text-[11px] text-[#475569]">
+            Toca para llamar ahora · Hablamos español
+          </p>
         </div>
-      </div>
 
-      {/* Disclaimer */}
-      <footer className="relative z-10 shrink-0 pb-1.5 sm:pb-2 text-center">
-        <p className="text-[10px] sm:text-[11px] text-navy/60 max-w-md mx-auto leading-tight">
-          Anuncio publicitario de abogados — Law Offices of Manuel Solis. La
-          activación del programa está sujeta a la evaluación individual de
-          cada caso. Los resultados anteriores no garantizan un resultado
-          similar.
-        </p>
-      </footer>
+        {/* Disclaimer */}
+        <footer className="shrink-0 border-t border-hairline pt-1.5 text-center">
+          <p className="mx-auto max-w-md text-[10px] leading-tight text-[#64748B]">
+            Anuncio publicitario de abogados — Law Offices of Manuel Solis.
+            Abogado responsable: Manuel Solís (Houston, TX). Llamar no crea una
+            relación abogado-cliente. La activación está sujeta a la evaluación
+            individual de cada caso. Los resultados anteriores no garantizan un
+            resultado similar.
+          </p>
+        </footer>
+      </section>
     </main>
   );
 }
