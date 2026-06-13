@@ -6,7 +6,7 @@ const PHONE_DISPLAY = "(713) 322-7646";
 const PHONE_TEL = "+17133227646";
 
 const VIDEO_EMBED =
-  "https://manuelsolis-my.sharepoint.com/personal/jolverag_manuelsolis_com/_layouts/15/embed.aspx?UniqueId=562285e8-609f-41df-9303-c1b02f01a39f&embed=%7B%22af%22%3Atrue%2C%22ust%22%3Afalse%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create";
+  "https://iframe.mediadelivery.net/embed/547379/b9aa29cc-cd26-4c6f-88eb-7c977e2f7a95?autoplay=true&muted=true&preload=true&loop=false";
 
 export default function Home() {
   return (
@@ -77,7 +77,7 @@ export default function Home() {
               <iframe
                 className="absolute inset-0 h-full w-full"
                 src={VIDEO_EMBED}
-                allow="autoplay; encrypted-media; fullscreen"
+                allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture; fullscreen"
                 allowFullScreen
                 scrolling="no"
                 title="Mensaje informativo — Law Offices of Manuel Solis"
