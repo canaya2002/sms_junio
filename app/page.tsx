@@ -24,7 +24,7 @@ export default function Home() {
             width={1200}
             height={546}
             priority
-            className="h-9 sm:h-10 w-auto mix-blend-multiply"
+            className="h-11 sm:h-12 w-auto mix-blend-multiply"
           />
           <div className="flex flex-col items-end gap-0.5 leading-none text-right">
             <span className="text-[9px] font-bold uppercase tracking-wide text-navy">
