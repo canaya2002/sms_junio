@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 @theme {
-  --color-paper: #f4f7f5;
-  --color-ink: #0f2a22;
-  --color-go: #0e9f6e;
-  --color-go-deep: #047857;
-  --color-mint: #a7f3d0;
-  --color-hairline: #e2e8e5;
+  --color-paper: #f4f6f9;
+  --color-ink: #14213d;
+  --color-go: #1b3a6b;
+  --color-go-deep: #11294f;
+  --color-mint: #bcd0ee;
+  --color-hairline: #e3e7ee;
   --color-navy: #1a3a6b;
 
   --font-sans: var(--font-geist-sans);
@@ -28,10 +28,10 @@
   @keyframes breathe {
     0%,
     100% {
-      box-shadow: 0 8px 24px rgba(14, 159, 110, 0.32);
+      box-shadow: 0 8px 24px rgba(27, 58, 107, 0.32);
     }
     50% {
-      box-shadow: 0 10px 34px rgba(14, 159, 110, 0.5);
+      box-shadow: 0 10px 34px rgba(27, 58, 107, 0.5);
     }
   }
 }

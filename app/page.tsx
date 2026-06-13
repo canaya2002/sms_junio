@@ -5,7 +5,8 @@ import Image from "next/image";
 const PHONE_DISPLAY = "(713) 322-7646";
 const PHONE_TEL = "+17133227646";
 
-const YOUTUBE_ID = "3Z6BOOCBgas";
+const VIDEO_EMBED =
+  "https://manuelsolis-my.sharepoint.com/personal/jolverag_manuelsolis_com/_layouts/15/embed.aspx?UniqueId=562285e8-609f-41df-9303-c1b02f01a39f&embed=%7B%22af%22%3Atrue%2C%22ust%22%3Afalse%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create";
 
 export default function Home() {
   return (
@@ -39,7 +40,7 @@ export default function Home() {
         <div className="flex min-h-0 flex-1 flex-col items-center justify-center gap-2.5 text-center">
           {/* Hook + Headline + Subheadline */}
           <div className="shrink-0">
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-[#ECFDF5] px-3 py-1 ring-1 ring-[#6EE7B7]">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-[#EEF3FB] px-3 py-1 ring-1 ring-[#9DBBE8]">
               <span className="relative flex h-1.5 w-1.5">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-go/70" />
                 <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-go" />
@@ -75,9 +76,10 @@ export default function Home() {
             >
               <iframe
                 className="absolute inset-0 h-full w-full"
-                src={`https://www.youtube.com/embed/${YOUTUBE_ID}?autoplay=1&mute=1&rel=0&modestbranding=1&playsinline=1`}
+                src={VIDEO_EMBED}
                 allow="autoplay; encrypted-media; fullscreen"
                 allowFullScreen
+                scrolling="no"
                 title="Mensaje informativo — Law Offices of Manuel Solis"
               />
               <span className="pointer-events-none absolute left-2 top-2 z-10 rounded-full bg-ink/85 px-2 py-0.5 text-[9px] font-semibold text-white">
@@ -87,11 +89,11 @@ export default function Home() {
           </div>
 
           {/* Sello de confianza */}
-          <div className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-[#F0FDF4] px-3 py-1.5">
+          <div className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-[#EEF3FB] px-3 py-1.5">
             <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4 shrink-0">
               <path
                 d="M12 2l2.6 1.9 3.2-.3 1 3.1 2.6 1.9-1 3.1 1 3.1-2.6 1.9-1 3.1-3.2-.3L12 22l-2.6-1.9-3.2.3-1-3.1L2.6 15l1-3.1-1-3.1 2.6-1.9 1-3.1 3.2.3L12 2z"
-                fill="#0E9F6E"
+                fill="#1b3a6b"
               />
               <path
                 d="M8.5 12.2l2.3 2.3 4.5-4.7"
