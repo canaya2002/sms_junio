@@ -1,9 +1,8 @@
 import Image from "next/image";
 
-// PENDIENTE: confirmar el número telefónico final de la campaña.
-// Por ahora se usa la línea de la campaña anterior como marcador.
-const PHONE_DISPLAY = "(713) 322-7646";
-const PHONE_TEL = "+17133227646";
+// Número telefónico final de la campaña (USA, con código +1).
+const PHONE_DISPLAY = "+1 (713) 322-7582";
+const PHONE_TEL = "+17133227582";
 
 const VIDEO_EMBED =
   "https://iframe.mediadelivery.net/embed/547379/b9aa29cc-cd26-4c6f-88eb-7c977e2f7a95?autoplay=true&muted=true&preload=true&loop=false";
